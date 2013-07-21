@@ -1,5 +1,7 @@
 ## Laravel 4 simple Bootstrap Alert
 
+[![Build Status](https://travis-ci.org/faisalarbain/Alert.png?branch=master)](https://travis-ci.org/faisalarbain/Alert)
+
 Simple implementation for Bootstrap Alert in Laravel.
 
 ### Installation
