@@ -1,4 +1,4 @@
-<?php namespace FaisalArbain\Alerts\Facades;
+<?php namespace FaisalArbain\Alert\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -9,6 +9,6 @@ class Alert extends Facade {
 	 *
 	 * @return string
 	 */
-	protected static function getFacadeAccessor() { return 'alerts'; }
+	protected static function getFacadeAccessor() { return 'alert'; }
 
 }

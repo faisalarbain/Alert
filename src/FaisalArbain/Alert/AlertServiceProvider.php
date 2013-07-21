@@ -4,12 +4,18 @@ use Illuminate\Support\ServiceProvider;
 
 class AlertServiceProvider extends ServiceProvider {
 
+
 	/**
 	 * Indicates if loading of the provider is deferred.
 	 *
 	 * @var bool
 	 */
 	protected $defer = false;
+
+	public function boot()
+	{
+		$this->package('faisalarbain/alert');
+	}
 
 	/**
 	 * Register the service provider.
@@ -19,7 +25,7 @@ class AlertServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		// Register the AlertsMessageBag class.
-		$this->app['alerts'] = $this->app->share(function($app){
+		$this->app['alert'] = $this->app->share(function($app){
 			return new BootstrapAlert($app['session']);
 		});
 	}
@@ -31,7 +37,7 @@ class AlertServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('alerts');
+		return array('alert');
 	}
 
 }

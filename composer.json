@@ -1,6 +1,6 @@
 {
     "name": "faisal-arbain/alert",
-    "description": "",
+    "description": "Simple bootstrap alert",
     "authors": [
         {
             "name": "Faisal Arbain",
@@ -16,5 +16,6 @@
             "FaisalArbain\\Alert": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "license": "MIT"
 }
