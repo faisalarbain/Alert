@@ -6,7 +6,7 @@ Simple implementation for Bootstrap Alert in Laravel.
 
 ### Installation
 
-To get the lastest version of Theme simply require it in your `composer.json` file.
+To get the lastest version of Alert simply require it in your `composer.json` file.
 
 ~~~
 "faisal-arbain/alert": "dev-master"
