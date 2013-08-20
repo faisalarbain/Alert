@@ -1,6 +1,7 @@
 <?php namespace FaisalArbain\Alert;
 
 use Illuminate\Session\Store;
+use Illuminate\Support\Contracts\MessageProviderInterface;
 /**
  * BootstrapAlert
  */
@@ -52,7 +53,13 @@ use Illuminate\Session\Store;
  		$output = "";
  		foreach ($all as $type => $messages) {
  			foreach ($messages as $msg) {
- 				$output .= "<div class='alert alert-$type'>$msg</div>\n";
+ 				
+
+				$_msg = join("<br/>", array_flatten($msg->toArray()));
+				
+				
+				$output .= "<div class='alert alert-$type'>$_msg</div>\n";
+				
  			}
  		}
 
