@@ -54,11 +54,11 @@ use Illuminate\Support\Contracts\MessageProviderInterface;
  		foreach ($all as $type => $messages) {
  			foreach ($messages as $msg) {
  				
-
-				$_msg = join("<br/>", array_flatten($msg->toArray()));
+ 				if($msg instanceof MessageProviderInterface){
+ 					$msg = join("<br/>", array_flatten($msg->toArray()));
+				}
 				
-				
-				$output .= "<div class='alert alert-$type'>$_msg</div>\n";
+				$output .= "<div class='alert alert-$type'>$msg</div>\n";
 				
  			}
  		}
