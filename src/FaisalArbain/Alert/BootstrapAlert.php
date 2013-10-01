@@ -1,6 +1,5 @@
 <?php namespace FaisalArbain\Alert;
 
-use Illuminate\Session\Store;
 use Illuminate\Support\Contracts\MessageProviderInterface;
 /**
  * BootstrapAlert
@@ -10,7 +9,7 @@ use Illuminate\Support\Contracts\MessageProviderInterface;
  	public static $KEY = "BOOTSTRAP_ALERT";
  	public $session;
 
- 	function __construct(Store $session)
+ 	function __construct($session)
  	{
  		$this->session = $session;
  	}
